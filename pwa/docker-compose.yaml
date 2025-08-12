@@ -12,7 +12,7 @@ services:
       - ./backend:/app
     environment:
       - DJANGO_SUPERUSER_USERNAME=admin
-      - DJANGO_SUPERUSER_PASSWORD=admin
+      - DJANGO_SUPERUSER_USERNAME=admin123
       - DJANGO_SUPERUSER_EMAIL=admin@example.com
 
   frontend:
@@ -21,7 +21,7 @@ services:
       dockerfile: app/Dockerfile
     container_name: pokemon-frontend
     ports:
-      - "5173:5173"
+      - "3000:5173"
     volumes:
       - ./app:/app
     depends_on:
